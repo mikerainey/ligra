@@ -466,6 +466,7 @@ inline bool cond_true (intT d) { return 1; }
 template<class vertex>
 void Compute(graph<vertex>&, commandLine);
 
+#if 0
 int parallel_main(int argc, char* argv[]) {
   commandLine P(argc,argv," [-s] <inFile>");
   char* iFile = P.getArgument(0);
@@ -525,4 +526,6 @@ int parallel_main(int argc, char* argv[]) {
     }
   }
 }
+#endif
+
 #endif
