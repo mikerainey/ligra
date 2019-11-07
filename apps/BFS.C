@@ -40,6 +40,11 @@ struct BFS_F {
 template <class vertex>
 void Compute(graph<vertex>& GA, commandLine P) {
   long start = P.getOptionLongValue("-r",0);
+  Compute(GA, start);
+}
+
+template <class vertex>
+void Compute(graph<vertex>& GA, long start) {
   long n = GA.n;
   //creates Parents array, initialized to all -1, except for start
   uintE* Parents = newA(uintE,n);

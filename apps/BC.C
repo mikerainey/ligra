@@ -92,6 +92,11 @@ struct BC_Back_Vertex_F {
 template <class vertex>
 void Compute(graph<vertex>& GA, commandLine P) {
   long start = P.getOptionLongValue("-r",0);
+  Compute(GA, start);
+}
+
+template <class vertex>
+void Compute(graph<vertex>& GA, long start) {
   long n = GA.n;
 
   fType* NumPaths = newA(fType,n);
